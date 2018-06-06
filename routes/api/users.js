@@ -64,11 +64,12 @@ router.post("/login", (req, res) => {
     }
     //check password
     bcrypt.compare(password, user.password).then(isMatch => {
+      //User Matched
       if (isMatch) {
-        //User Matched
+        //create JWT payload- you can add more if needed
         const payload = { id: user.id, name: user.name, avatar: user.avatar };
 
-        //create JWT payload with user info
+        //JWT signature
         jwt.sign(
           payload,
           keys.secretOrKey,
@@ -88,7 +89,7 @@ router.post("/login", (req, res) => {
 });
 
 //@route    GET api/users/current
-//@desc     return current user
+//@desc     return current user (whoever the token belongs to)
 //@access   Private
 
 router.get(
