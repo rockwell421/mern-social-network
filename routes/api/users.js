@@ -25,14 +25,15 @@ router.post("/register", (req, res) => {
   //pull out errors and isValid via destructuring
   const { errors, isValid } = validateRegisterInput(req.body); //includes everything sent to the route
 
-  //Check Validation
+  //Check Validation & returns errors
   if (!isValid) {
     return res.status(400).json(errors);
   }
 
   User.findOne({ email: req.body.email }).then(user => {
     if (user) {
-      return res.status(400).json({ email: "Email already exists!" });
+      errors.email = "Email already exists";
+      return res.status(400).json(errors);
     } else {
       const avatar = gravatar.url(req.body.email, {
         s: "200", //size
