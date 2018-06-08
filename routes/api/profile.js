@@ -1,3 +1,6 @@
+//this module handles the public and private profile routes
+//create and edit user profile
+
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose"); //for getting info from db

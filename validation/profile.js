@@ -1,3 +1,4 @@
+//This file validates profile information specifically
 //refer to notes on register.js for more details
 const Validator = require("validator");
 const isEmpty = require("./is-empty");

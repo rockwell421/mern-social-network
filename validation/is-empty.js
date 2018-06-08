@@ -1,4 +1,5 @@
-//This global method checks if an input is null, undefined, a string, an object. This is so we can validate input easily on the client-side and server-side
+//This global method checks if an input is null, undefined, a string, an object. This is so we can validate input easily on the client-side and server-side and re-use it
+
 const isEmpty = value =>
   value === undefined ||
   value === null ||

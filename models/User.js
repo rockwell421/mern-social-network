@@ -1,3 +1,5 @@
+//Mongoose Schema for User profile
+
 const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;

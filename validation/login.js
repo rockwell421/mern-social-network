@@ -1,3 +1,4 @@
+//this module handles login validation logic
 //refer to notes on register.js for more details
 const Validator = require("validator");
 const isEmpty = require("./is-empty");
