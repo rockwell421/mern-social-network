@@ -1,4 +1,4 @@
-//Mongoose Schema for User profile
+//Mongoose Schema/model for User profile
 
 const mongoose = require("mongoose");
 
